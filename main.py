@@ -2,11 +2,11 @@ import streamlit as st
 import pandas as pd
 import requests
 import numpy as np
-#import matplotlib.pyplot as plt
-#from colorama import Fore, Back, Style
+import matplotlib.pyplot as plt
+from colorama import Fore, Back, Style
 from IPython.display import Markdown, display
-#import seaborn as sns
-#sns.set()
+import seaborn as sns
+sns.set()
 from sklearn.mixture import GaussianMixture
 from matplotlib.colors import LogNorm
 from matplotlib.ticker import MaxNLocator
@@ -14,7 +14,6 @@ from sklearn.metrics.pairwise import cosine_similarity,cosine_distances
 from sklearn.metrics.pairwise import manhattan_distances
 from scipy.spatial.distance import cdist
 import os
-
 
 
 """
