@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 import numpy as np
 #import matplotlib.pyplot as plt
-from colorama import Fore, Back, Style
+#from colorama import Fore, Back, Style
 from IPython.display import Markdown, display
 import seaborn as sns
 sns.set()
@@ -67,8 +67,7 @@ st.markdown('---')
 # start from here i add my project code#
 ########################################
 
-def printmd(string):
-    display(Markdown(string))
+
 
 original = pd.read_csv("clustering_and_anomalies_hayder.csv")
 results = pd.read_csv("clustering_and_anomalies_hayder.csv")
