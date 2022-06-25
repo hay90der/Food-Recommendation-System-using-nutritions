@@ -14,7 +14,9 @@ from sklearn.metrics.pairwise import cosine_similarity,cosine_distances
 from sklearn.metrics.pairwise import manhattan_distances
 from scipy.spatial.distance import cdist
 import os
+from PIL import Image
 
+#Pillow==9.1.0
 
 """
 # Food Recommendation System using food nutrition
@@ -196,3 +198,12 @@ mn = mhtndf.head(10)
 * using Manhattan Distance
 """
 st.write(mn)
+st.markdown('---')
+image = Image.open('hm.jpg')
+
+st.image(image)
+"""
+##### Developed By: Hayder Hussien Al-Chalabi
+##### Supervised By: Assist. Prof. Dr. Mahdi N. Jassim
+##### Informatics Inistitute for Postgraduate Studies - IIPS
+"""
