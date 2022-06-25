@@ -17,7 +17,8 @@ import os
 from PIL import Image
 
 #Pillow==9.1.0
-
+background = Image.open('logo2.png')
+st.image(background,width=300)
 """
 # Food Recommendation System using food nutrition
 """
