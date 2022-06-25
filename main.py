@@ -207,6 +207,13 @@ st.image(image)
 ##### Supervised By: Assist. Prof. Dr. Mahdi N. Jassim
 ##### Informatics Inistitute for Postgraduate Studies - IIPS
 """
-st.button(label, on_click='https://facebook.com/jojoslover', args=None, kwargs=None, *, disabled=False)
+
+GitHub = '[GitHub](https://github.com/hay90der/)'
+facebook = '[Facebook](https://facebook.com/jojoslover)'
+twitter = '[Twitter](https://twitter.com/JOJOSLoVeR)'
+
+st.markdown(''+ GitHub + ' - ' + facebook + ' - ' + twitter + '', unsafe_allow_html=True)
+
+
 
 
