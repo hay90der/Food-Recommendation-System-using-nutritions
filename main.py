@@ -54,6 +54,7 @@ newdata = {
 }
 
 dff = pd.DataFrame(newdata)
+st.sidebar.write('Food Nutrition Facts')
 st.sidebar.table(dff)
 
 
