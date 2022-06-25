@@ -207,3 +207,6 @@ st.image(image)
 ##### Supervised By: Assist. Prof. Dr. Mahdi N. Jassim
 ##### Informatics Inistitute for Postgraduate Studies - IIPS
 """
+st.button(label, on_click='https://facebook.com/jojoslover', args=None, kwargs=None, *, disabled=False)
+
+
