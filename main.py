@@ -83,7 +83,7 @@ cal = data.pivot_table(columns='product_name',
                                  ]
                          )
 
-def your_food_cal(recipe_name, corr = 0.999, recipe_number = 6):
+def your_food_cal(recipe_name, corr = 0.999, recipe_number = n):
     # create a dataframe
     dataframe = pd.DataFrame(data, columns = ['product_name','fat_100g','carbohydrates_100g','sugars_100g','proteins_100g','salt_100g','energy_100g','reconstructed_energy','g_sum','cluster','certainty','anomaly'])
     #the full dataset
@@ -143,10 +143,10 @@ def Euclidean_Dist(dataframe1, rslt_df, cols=['fat_100g','carbohydrates_100g','s
     
     #skip first row - drop first row
     rdf = rdf.iloc[1: , :]
-    display(rdf.head(10))
+    display(rdf.head(n))
     
-    print(rdf.head(10))
-    return rdf.head(10)
+    print(rdf.head(n))
+    return rdf.head(n)
     #return np.linalg.norm(dataframe1[cols].values - rslt_df[cols].values,axis=1)
 
 
@@ -184,7 +184,7 @@ mhtndf["cluster"] =   original.loc[dataframe1.index.values, "cluster"]
 mhtndf = mhtndf.sort_values(by='ManhattanDist', ascending=True)
 #skip first row - drop first row
 mhtndf = mhtndf.iloc[1: , :]
-mn = mhtndf.head(10)
+mn = mhtndf.head(n)
 
 
 #####################################
