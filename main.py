@@ -83,6 +83,8 @@ cal = data.pivot_table(columns='product_name',
                                  ]
                          )
 
+
+
 def your_food_cal(recipe_name, corr = 0.999, recipe_number = n):
     # create a dataframe
     dataframe = pd.DataFrame(data, columns = ['product_name','fat_100g','carbohydrates_100g','sugars_100g','proteins_100g','salt_100g','energy_100g','reconstructed_energy','g_sum','cluster','certainty','anomaly'])
@@ -101,7 +103,7 @@ def your_food_cal(recipe_name, corr = 0.999, recipe_number = n):
     cosine_sim_df = pd.DataFrame(cosine_sim,columns=['cosine_similarity'])
     cosine_sim_df = cosine_sim_df.sort_values('cosine_similarity', ascending=False)
     idx = cosine_sim_df.index
-    display(cosine_sim_df.head(6))
+    display(cosine_sim_df.head(n))
     ary = cdist(data_x, data_y, metric='euclidean')
     listt = pd.DataFrame(ary,columns=['euclidean_dist'])
     listt = listt.sort_values(by='euclidean_dist', ascending=True)
