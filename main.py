@@ -58,7 +58,7 @@ st.sidebar.write('Food Nutrition Facts')
 st.sidebar.table(dff)
 
 
-st.text_input('your choice from select box is:',pn_choice)
+n = st.text_input('Choose your cluster size, input numbers only')
 st.markdown('---')
 
 """
