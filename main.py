@@ -57,8 +57,8 @@ dff = pd.DataFrame(newdata)
 st.sidebar.write('Food Nutrition Facts')
 st.sidebar.table(dff)
 
-
-n = st.text_input('Choose your cluster size, input numbers only')
+defn = 5
+n = st.text_input('Choose your cluster size, input numbers only',defn)
 st.markdown('---')
 
 """
