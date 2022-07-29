@@ -58,9 +58,10 @@ st.sidebar.write('Food Nutrition Facts')
 st.sidebar.table(dff)
 
 defn = 5
-n = st.text_input('Choose your cluster size, input numbers only',defn)
+myn = st.text_input('Choose your cluster size, input numbers only',defn)
 st.markdown('---')
 
+n = int(myn)
 """
 ##### According to your food nutrition we recommend these foods
 * using Euclidean Distance
