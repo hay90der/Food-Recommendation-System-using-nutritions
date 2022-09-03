@@ -24,7 +24,7 @@ st.image(background,width=300)
 """
 
 def get_data():
-    path = "nutrition_table2.csv.csv"
+    path = "nutrition_table2.csv"
     #path = "clustering_and_anomalies_hayder.csv"
     return pd.read_csv(path)
 #,fat_100g,carbohydrates_100g,sugars_100g,proteins_100g,salt_100g,energy_100g,reconstructed_energy,g_sum,exceeded,product
