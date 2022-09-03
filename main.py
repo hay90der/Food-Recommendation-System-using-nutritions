@@ -29,7 +29,8 @@ def get_data():
 
 data = get_data()
 #data
-data = data.drop_duplicates(subset=['product_name'], keep='first', inplace=False)
+#data = data.drop_duplicates(subset=['product_name'], keep='first', inplace=False)
+st.write(data.shape)
 # rename duplicatcs name , df1.index = df1.index + df1.groupby(level=0).cumcount().astype(str).replace('0','')
 
 
@@ -178,9 +179,9 @@ rslt_df = dataframe1[dataframe1['product_name'] == pn_choice]
 data_x=dataframe1.drop(columns=['product_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
 data_y=rslt_df.drop(columns=['product_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
 
-st.dataframe(data_x)
-st.markdown('---')
-st.dataframe(dataframe1)
+#st.dataframe(data_x)
+#st.markdown('---')
+#st.dataframe(dataframe1)
 mhtn = manhattan_distances(data_x, data_y, sum_over_features=True)
 mhtndf = pd.DataFrame(mhtn, columns = ['ManhattanDist'])
 
