@@ -28,6 +28,7 @@ def get_data():
     #path = "clustering_and_anomalies_hayder.csv"
     return pd.read_csv(path)
 #,fat_100g,carbohydrates_100g,sugars_100g,proteins_100g,salt_100g,energy_100g,reconstructed_energy,g_sum,exceeded,product
+
 data = get_data()
 #data
 #data = data.drop_duplicates(subset=['product'], keep='first', inplace=False).dropna()
@@ -37,14 +38,14 @@ st.write(data.shape)
 
 # #data['product_name'] = data['product_name'] + data.groupby(['product_name']).cumcount().astype(str).replace('0','')
 
-# pn = data['product_name'].drop_duplicates()
-# pn_choice = st.sidebar.selectbox("Select your food:", pn)
-# fat = data["fat_100g"].loc[data["product_name"] == pn_choice]
-# carbs = data["carbohydrates_100g"].loc[data["product_name"] == pn_choice]
-# sugars = data["sugars_100g"].loc[data["product_name"] == pn_choice]
-# proteins = data["proteins_100g"].loc[data["product_name"] == pn_choice]
-# salts = data["salt_100g"].loc[data["product_name"] == pn_choice]
-# energy = data["energy_100g"].loc[data["product_name"] == pn_choice]
+pn = data['product'].drop_duplicates()
+pn_choice = st.sidebar.selectbox("Select your food:", pn)
+fat = data["fat_100g"].loc[data["product_name"] == pn_choice]
+carbs = data["carbohydrates_100g"].loc[data["product_name"] == pn_choice]
+sugars = data["sugars_100g"].loc[data["product_name"] == pn_choice]
+proteins = data["proteins_100g"].loc[data["product_name"] == pn_choice]
+salts = data["salt_100g"].loc[data["product_name"] == pn_choice]
+energy = data["energy_100g"].loc[data["product_name"] == pn_choice]
 
 # #fat_choice = st.sidebar.write(f"Value of d", fat)
 # #carbs_choice = st.sidebar.text("amount of carbs" + carbs)
