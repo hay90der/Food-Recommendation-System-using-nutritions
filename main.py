@@ -127,8 +127,8 @@ rslt_df = dataframe1[dataframe1['product_name'] == pn_choice]
 
 
 def Euclidean_Dist(dataframe1, rslt_df, cols=['fat_100g','carbohydrates_100g','sugars_100g','proteins_100g','salt_100g','energy_100g']):
-    data_x=dataframe1.drop(columns=['p_name','product_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
-    data_y=rslt_df.drop(columns=['p_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
+    data_x=dataframe1 #.drop(columns=['p_name','product_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
+    data_y=rslt_df #.drop(columns=['p_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
     
     data_y["p_name"] =   original.loc[dataframe1.index.values, "p_name"]
     data_y["cluster"] =   original.loc[dataframe1.index.values, "cluster"]
