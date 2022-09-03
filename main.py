@@ -179,14 +179,12 @@ rslt_df = dataframe1[dataframe1['product_name'] == pn_choice]
 data_x=dataframe1.drop(columns=['product_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
 data_y=rslt_df.drop(columns=['product_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
 
-#st.dataframe(data_x)
-#st.markdown('---')
-#st.dataframe(dataframe1)
+
 mhtn = manhattan_distances(data_x, data_y, sum_over_features=True)
 mhtndf = pd.DataFrame(mhtn, columns = ['ManhattanDist'])
 st.write('---')
 st.write('hh')
-st.dataframe(data_x)
+st.dataframe(rslt_df)
 mhtndf["product_name"] =   original.loc[dataframe1.index.values, "product_name"]
 mhtndf["fat_100g"] =   original.loc[dataframe1.index.values, "fat_100g"]
 mhtndf["carbohydrates_100g"] =   original.loc[dataframe1.index.values, "carbohydrates_100g"]
