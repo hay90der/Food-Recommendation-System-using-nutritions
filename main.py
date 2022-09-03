@@ -30,7 +30,7 @@ def get_data():
 #,fat_100g,carbohydrates_100g,sugars_100g,proteins_100g,salt_100g,energy_100g,reconstructed_energy,g_sum,exceeded,product
 data = get_data()
 #data
-data = data.drop_duplicates(subset=['product'], keep='first', inplace=False).dropna()
+#data = data.drop_duplicates(subset=['product'], keep='first', inplace=False).dropna()
 st.write(data.shape)
 # rename duplicatcs name , df1.index = df1.index + df1.groupby(level=0).cumcount().astype(str).replace('0','')
 
