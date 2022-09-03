@@ -38,7 +38,8 @@ st.write(data.shape)
 
 # #data['product_name'] = data['product_name'] + data.groupby(['product_name']).cumcount().astype(str).replace('0','')
 
-pn = data['product'] #.drop_duplicates()
+pn = data['product']
+#.drop_duplicates()
 pn_choice = st.sidebar.selectbox("Select your food:", pn)
 fat = data["fat_100g"].loc[data["product_name"] == pn_choice]
 carbs = data["carbohydrates_100g"].loc[data["product_name"] == pn_choice]
