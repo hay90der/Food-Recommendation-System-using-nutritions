@@ -180,7 +180,7 @@ data_y=rslt_df.drop(columns=['product_name','anomaly','reconstructed_energy','g_
 
 st.dataframe(data_x)
 st.markdown('---')
-st.dataframe(data_y)
+st.dataframe(rslt_df)
 mhtn = manhattan_distances(data_x, data_y, sum_over_features=True)
 mhtndf = pd.DataFrame(mhtn, columns = ['ManhattanDist'])
 
