@@ -122,12 +122,12 @@ newdata = your_food_cal('Banana Chips Sweetened (Whole)')
 ### start using eculidean algorithm ###
 #######################################
 
-dataframe1 = pd.DataFrame(data, columns = ['product_name','fat_100g','carbohydrates_100g','sugars_100g','proteins_100g','salt_100g','energy_100g','reconstructed_energy','g_sum','cluster','certainty','anomaly'])
-rslt_df = dataframe1[dataframe1['product_name'] == pn_choice]
+dataframe1 = pd.DataFrame(data, columns = ['p_name','fat_100g','carbohydrates_100g','sugars_100g','proteins_100g','salt_100g','energy_100g','reconstructed_energy','g_sum','cluster','certainty','anomaly'])
+rslt_df = dataframe1[dataframe1['p_name'] == pn_choice]
 
 
 def Euclidean_Dist(dataframe1, rslt_df, cols=['fat_100g','carbohydrates_100g','sugars_100g','proteins_100g','salt_100g','energy_100g']):
-    data_x=dataframe1 #.drop(columns=['p_name','product_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
+    data_x=dataframe1 #.drop(columns=['p_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
     data_y=rslt_df #.drop(columns=['p_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
     
     data_y["p_name"] =   original.loc[dataframe1.index.values, "p_name"]
