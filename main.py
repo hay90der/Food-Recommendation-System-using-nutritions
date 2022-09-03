@@ -29,11 +29,11 @@ def get_data():
 
 data = get_data()
 #data
-# remove duplicatite name , data = data.drop_duplicates(subset=['product_name'], keep='last', inplace=False)
+data = data.drop_duplicates(subset=['product_name'], keep='last', inplace=Ture)
 # rename duplicatcs name , df1.index = df1.index + df1.groupby(level=0).cumcount().astype(str).replace('0','')
 
 
-data['product_name'] = data['product_name'] + data.groupby(['product_name']).cumcount().astype(str).replace('0','')
+#data['product_name'] = data['product_name'] + data.groupby(['product_name']).cumcount().astype(str).replace('0','')
 
 pn = data['product_name'].drop_duplicates()
 pn_choice = st.sidebar.selectbox("Select your food:", pn)
