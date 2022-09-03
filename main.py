@@ -29,7 +29,7 @@ def get_data():
 
 data = get_data()
 #data
-#data = data.drop_duplicates(subset=['product_name'], keep='first', inplace=False)
+data = data.drop_duplicates(subset=['product_name'], keep='first', inplace=True)
 st.write(data.shape)
 # rename duplicatcs name , df1.index = df1.index + df1.groupby(level=0).cumcount().astype(str).replace('0','')
 
