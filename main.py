@@ -213,7 +213,7 @@ st.write(data.shape)
 ##### According to your food nutrition we recommend these foods
 * using Manhattan Distance
 """
-st.write(mn)
+# st.write(mn)
 st.markdown('---')
 image = Image.open('hm.jpg')
 
