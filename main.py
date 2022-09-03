@@ -50,7 +50,7 @@ energy = data["energy_100g"].loc[data["product_name"] == pn_choice]
 # initialize data of lists.
 newdata = {
         'name  ':['fat','carbs','sugars','proteins','salts','energy'],
-        'amount':[float64(fat),float64(carbs),float64(sugars),float64(proteins),float64(salts),float64(energy)]
+        'amount':[np.float64(fat),np.float64(carbs),np.float64(sugars),np.float64(proteins),np.float64(salts),np.float64(energy)]
 }
 
 dff = pd.DataFrame(newdata)
