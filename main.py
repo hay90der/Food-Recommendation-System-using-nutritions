@@ -24,7 +24,8 @@ st.image(background,width=300)
 """
 
 def get_data():
-    path = "clustering_and_anomalies_hayder.csv"
+    path = "nutrition_table2.csv.csv"
+    #path = "clustering_and_anomalies_hayder.csv"
     return pd.read_csv(path)
 
 data = get_data()
