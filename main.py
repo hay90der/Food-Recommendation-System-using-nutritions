@@ -186,7 +186,7 @@ mhtn = manhattan_distances(data_x, data_y, sum_over_features=True)
 mhtndf = pd.DataFrame(mhtn, columns = ['ManhattanDist'])
 st.write('---')
 st.write('hh')
-st.dataframe(mhtndf)
+st.dataframe(data_x)
 mhtndf["product_name"] =   original.loc[dataframe1.index.values, "product_name"]
 mhtndf["fat_100g"] =   original.loc[dataframe1.index.values, "fat_100g"]
 mhtndf["carbohydrates_100g"] =   original.loc[dataframe1.index.values, "carbohydrates_100g"]
