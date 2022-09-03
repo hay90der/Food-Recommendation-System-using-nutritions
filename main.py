@@ -83,7 +83,7 @@ original = pd.read_csv("clustering_and_anomalies_hayder.csv")
 results = pd.read_csv("clustering_and_anomalies_hayder.csv")
 
 
-cal = data.pivot_table(columns='product_name',
+cal = data.pivot_table(columns='p_name',
                           values=['fat_100g','carbohydrates_100g','sugars_100g',
                                   'proteins_100g','salt_100g','energy_100g',
                                   'reconstructed_energy','g_sum','cluster','certainty','anomaly'
@@ -94,18 +94,18 @@ cal = data.pivot_table(columns='product_name',
 
 def your_food_cal(recipe_name, corr = 0.999, recipe_number = n):
     # create a dataframe
-    dataframe = pd.DataFrame(data, columns = ['product_name','fat_100g','carbohydrates_100g','sugars_100g','proteins_100g','salt_100g','energy_100g','reconstructed_energy','g_sum','cluster','certainty','anomaly'])
+    dataframe = pd.DataFrame(data, columns = ['p_name','fat_100g','carbohydrates_100g','sugars_100g','proteins_100g','salt_100g','energy_100g','reconstructed_energy','g_sum','cluster','certainty','anomaly'])
     #the full dataset
     display(dataframe.head(2))
     # selecting rows based on condition
-    rslt_df = dataframe[dataframe['product_name'] == recipe_name]
+    rslt_df = dataframe[dataframe['p_name'] == recipe_name]
     #user choise
     display(rslt_df)
     #similarity between 2 dataframes
     #cos_sim = dot(dataframe, rslt_df) / (norm(dataframe) * norm(rslt_df))
     #print(cos_sim)
-    data_x=dataframe.drop(columns=['product_name', 'anomaly'])
-    data_y=rslt_df.drop(columns=['product_name', 'anomaly'])
+    data_x=dataframe.drop(columns=['p_name', 'anomaly'])
+    data_y=rslt_df.drop(columns=['p_name', 'anomaly'])
     cosine_sim = cosine_similarity(data_x,data_y)
     cosine_sim_df = pd.DataFrame(cosine_sim,columns=['cosine_similarity'])
     cosine_sim_df = cosine_sim_df.sort_values('cosine_similarity', ascending=False)
@@ -127,10 +127,10 @@ rslt_df = dataframe1[dataframe1['product_name'] == pn_choice]
 
 
 def Euclidean_Dist(dataframe1, rslt_df, cols=['fat_100g','carbohydrates_100g','sugars_100g','proteins_100g','salt_100g','energy_100g']):
-    data_x=dataframe1.drop(columns=['product_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
-    data_y=rslt_df.drop(columns=['product_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
+    data_x=dataframe1.drop(columns=['p_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
+    data_y=rslt_df.drop(columns=['p_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
     
-    data_y["product_name"] =   original.loc[dataframe1.index.values, "product_name"]
+    data_y["p_name"] =   original.loc[dataframe1.index.values, "p_name"]
     data_y["cluster"] =   original.loc[dataframe1.index.values, "cluster"]
     
     
@@ -140,7 +140,7 @@ def Euclidean_Dist(dataframe1, rslt_df, cols=['fat_100g','carbohydrates_100g','s
     eculideanresultsarr = results
     
     rdf = pd.DataFrame(results, columns = ['EculideanDist'])
-    rdf["product_name"] =   original.loc[dataframe1.index.values, "product_name"]
+    rdf["p_name"] =   original.loc[dataframe1.index.values, "p_name"]
     rdf["fat_100g"] =   original.loc[dataframe1.index.values, "fat_100g"]
     rdf["carbohydrates_100g"] =   original.loc[dataframe1.index.values, "carbohydrates_100g"]
     rdf["sugars_100g"] =   original.loc[dataframe1.index.values, "sugars_100g"]
@@ -173,15 +173,15 @@ st.write(EucDist)
 #######################################
 
 
-dataframe1 = pd.DataFrame(results, columns = ['product_name','fat_100g','carbohydrates_100g','sugars_100g','proteins_100g','salt_100g','energy_100g','reconstructed_energy','g_sum','cluster','certainty','anomaly'])
-rslt_df = dataframe1[dataframe1['product_name'] == pn_choice]
-data_x=dataframe1.drop(columns=['product_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
-data_y=rslt_df.drop(columns=['product_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
+dataframe1 = pd.DataFrame(results, columns = ['p_name','fat_100g','carbohydrates_100g','sugars_100g','proteins_100g','salt_100g','energy_100g','reconstructed_energy','g_sum','cluster','certainty','anomaly'])
+rslt_df = dataframe1[dataframe1['p_name'] == pn_choice]
+data_x=dataframe1.drop(columns=['p_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
+data_y=rslt_df.drop(columns=['p_name','anomaly','reconstructed_energy','g_sum','certainty','cluster'])
    
 mhtn = manhattan_distances(data_x, data_y, sum_over_features=True)
 mhtndf = pd.DataFrame(mhtn, columns = ['ManhattanDist'])
 
-mhtndf["product_name"] =   original.loc[dataframe1.index.values, "product_name"]
+mhtndf["p_name"] =   original.loc[dataframe1.index.values, "p_name"]
 mhtndf["fat_100g"] =   original.loc[dataframe1.index.values, "fat_100g"]
 mhtndf["carbohydrates_100g"] =   original.loc[dataframe1.index.values, "carbohydrates_100g"]
 mhtndf["sugars_100g"] =   original.loc[dataframe1.index.values, "sugars_100g"]
