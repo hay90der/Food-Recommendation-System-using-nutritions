@@ -20,7 +20,7 @@ from PIL import Image
 background = Image.open('3333.png')
 st.image(background,width=300)
 """
-### Food Recommendation System using food nutrition - نظام توصية الطعام الصحي
+### Foodi : A.I FRS - فودي: نظام توصية الطعام الصحي
 """
 
 def get_data():
