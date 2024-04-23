@@ -17,10 +17,10 @@ import os
 from PIL import Image
 
 #Pillow==9.1.0
-background = Image.open('logo2.png')
+background = Image.open('3333.png')
 st.image(background,width=300)
 """
-# Food Recommendation System using food nutrition
+# Food Recommendation System using food nutrition - نظام توصية الطعام الصحي
 """
 
 def get_data():
@@ -223,7 +223,8 @@ st.image(image)
 """
 ##### Developed By: Hayder Hussien Al-Chalabi
 ##### Supervised By: Assist. Prof. Dr. Mahdi N. Jassim
-##### Informatics Inistitute for Postgraduate Studies - IIPS
+##### Food Recommendation System using food nutrition - نظام توصية الطعام الصحي
+
 """
 
 GitHub = '[GitHub](https://github.com/hay90der/)'
