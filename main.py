@@ -65,7 +65,7 @@ st.sidebar.write('Food Nutrition Facts')
 st.sidebar.table(dff)
 
 defn = 5
-myn = st.text_input('Choose your cluster size, input numbers only',defn)
+myn = st.text_input('Choose your cluster size, input numbers only - اختر حجم عينة النتائج',defn)
 st.markdown('---')
 
 n = int(myn)
