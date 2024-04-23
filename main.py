@@ -220,8 +220,7 @@ st.markdown('---')
 """
 ##### Developed By: Hayder Hussien Al-Chalabi
 ##### Supervised By: Assist. Prof. Dr. Mahdi N. Jassim
-##### Food Recommendation System using food nutrition - نظام توصية الطعام الصحي
-
+##### Foodi : A.I FRS - فودي: نظام توصية الطعام الصحي
 """
 
 GitHub = '[GitHub](https://github.com/hay90der/)'
