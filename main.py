@@ -20,7 +20,7 @@ from PIL import Image
 background = Image.open('3333.png')
 st.image(background,width=300)
 """
-# Food Recommendation System using food nutrition - نظام توصية اغذية صحي
+# Food Recommendation System using food nutrition - نظام توصية الطعام الصحي
 """
 
 def get_data():
@@ -219,6 +219,9 @@ st.markdown('---')
 # st.image(image)
 """
 ##### Developed By: Hayder Hussien Al-Chalabi
+##### Supervised By: Assist. Prof. Dr. Mahdi N. Jassim
+##### Food Recommendation System using food nutrition - نظام توصية الطعام الصحي
+
 """
 
 GitHub = '[GitHub](https://github.com/hay90der/)'
@@ -230,5 +233,4 @@ st.markdown(''+ GitHub + ' - ' + facebook + ' - ' + twitter + '', unsafe_allow_h
 
 
 
-# Supervised By: Assist. Prof. Dr. Mahdi N. Jassim
 # Informatics Inistitute for Postgraduate Studies - IIPS
